@@ -33,8 +33,8 @@
     "bundle-analyzer": "webpack --mode development --config webpack.config.js --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "update-buster": "node bin/generateCacheBuster.js >tmp/cacheBusterToken",
     "coverage": "env-cmd ./test.env nyc mocha --exit tests/*.test.js",
-    "dev": "env-cmd ./my.env node server.js 0.0.0.0",
-    "prod": "env-cmd ./my.prod.env node server.js 0.0.0.0"
+    "dev": "env-cmd ./my.env nodemon server.js 0.0.0.0",
+    "prod": "env-cmd ./my.prod.env nodemon server.js 0.0.0.0"
   },
   "config": {
     "blanket": {
